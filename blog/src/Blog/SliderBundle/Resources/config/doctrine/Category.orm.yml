@@ -1,0 +1,36 @@
+Blog\SliderBundle\Entity\Category:
+    type: entity
+    table: category
+    id:
+        categoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: category_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoryName:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: category_name
+        categoryDescription:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: category_description
+        categoryParent:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: category_parent
+    lifecycleCallbacks: {  }

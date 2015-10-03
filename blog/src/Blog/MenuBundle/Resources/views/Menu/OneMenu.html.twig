@@ -1,0 +1,24 @@
+
+
+
+
+    {% for punct in menu %}
+
+
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+        <a href="{{ punct.menuHref }}">{{ punct.menuName }}</a>
+        {#<ul class="sub-menu">#}
+
+            {#{{ render(controller('BlogMenuBundle:Menu:SubMenu, {'.punct.menuParent.','. punct.menuType'.})')) }}#}
+
+
+        {#</ul>#}
+    </li>
+
+
+
+
+    {% endfor %}
+
+
+

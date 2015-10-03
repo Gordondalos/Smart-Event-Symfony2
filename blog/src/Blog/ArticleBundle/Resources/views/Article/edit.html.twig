@@ -1,0 +1,17 @@
+{% extends '::baseAdmin.html.twig' %}
+
+
+{% block content %}
+    {% block recla %} {% endblock recla %}
+
+    
+    {{ form_start(editform, {attr: {novalidate: 'novalidate'}}) }}
+    {{ form_widget(editform) }}
+    {{ form_end(editform) }}
+
+    <script text="javascrypt">
+        CKEDITOR.replace("blog_articlebundle_article_shortText");
+        CKEDITOR.replace("blog_articlebundle_article_articleText");
+    </script>
+
+{% endblock content %}

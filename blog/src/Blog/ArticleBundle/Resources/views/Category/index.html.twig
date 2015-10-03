@@ -1,0 +1,31 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block title %}Категории{% endblock title %}
+{% block content %}
+    {% block recla %} {% endblock recla %}
+    {% block category %}{% endblock category %}
+<h2> <a href="{{ path('blog_category_create') }}">Создать раздел</a></h2>
+
+   <p>Все Разделы:</p>
+
+    {% for categorys in category %}
+
+        <p><a href ="category/post/{{categorys.categoryId  }}">{{ categorys.categoryName  }} - {{ categorys.categorySort |raw }} - </a>
+         <a href="{{ path('blog_category_edit', {'id': categorys.categoryId}) }}">--Правка</a>
+        <a href="{{ path('blog_category_delete', {'id': categorys.categoryId}) }}">--Удалить</a>
+
+
+        </p>
+        <div style="margin-left: 20px">
+            {{ render(controller('BlogArticleBundle:Category:doterCategoryAdmin',{'categoryId':categorys.CategoryId})) }}
+        </div>
+
+
+    {% endfor %}
+
+    <br>
+    <br>
+    <br>
+
+
+{% endblock content %}

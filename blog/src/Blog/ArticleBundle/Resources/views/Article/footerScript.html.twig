@@ -1,0 +1,73 @@
+
+
+
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/comment-reply.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.form.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/scripts.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/search-focus.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/superfish.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.mobilemenu.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.magnific-popup.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.flexslider-min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jplayer.playlist.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.jplayer.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/tmstickup.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/device.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.zaccordion.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/camera.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.debouncedresize.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.ba-resize.min.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/jquery.isotope.js') }}'></script>
+<script type='text/javascript' src='{{ asset('bundles/blogarticle/js/cherry-plugin.js') }}'></script>
+
+
+<script type="text/javascript">/* CloudFlare analytics upgrade */
+</script>
+<script type="text/javascript">window.NREUM || (NREUM = {});
+    NREUM.info = {
+        "beacon": "bam.nr-data.net",
+        "licenseKey": "72d7dcce33",
+        "applicationID": "1388850",
+        "transactionName": "ZV1TZ0FTVkFVWkwKXlwXcFBHW1dcG0lZBFQfUF5eVg==",
+        "queueTime": 0,
+        "applicationTime": 4248,
+        "atts": "SRpQEQlJRU8=",
+        "errorBeacon": "bam.nr-data.net",
+        "agent": "js-agent.newrelic.com\/nr-686.min.js"
+    }</script>
+
+<script src='{{ asset('bundles/blogarticle/js/jquery.dotdotdot.min.js') }}' type="text/javascript"></script>
+
+<script src="{{ asset('bundles/blogarticle/js/my.js') }}"></script>
+
+
+<!-- jQuery version must be >= 1.8.0; -->
+
+<script src="{{ asset('bundles/blogarticle/js/lightgallery.min.js') }}"></script>
+<script src="{{ asset('bundles/blogarticle/js/lg-thumbnail.min.js') }}"></script>
+<script src="{{ asset('bundles/blogarticle/js/lg-fullscreen.min.js') }}"></script>
+
+<!-- lightgallery plugins -->
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".sub > a").click(function() {
+           // e.preventDefault();
+            var ul = $(this).next(),
+                    clone = ul.clone().css({"height":"auto"}).appendTo(".mini-menu"),
+                    height = ul.css("height") === "0px" ? ul[0].scrollHeight + "px" : "0px";
+            clone.remove();
+            ul.animate({"height":height});
+            return false;
+        });
+        $('.mini-menu > ul > li > a').click(function(){
+            $('.sub a').removeClass('active');
+            $(this).addClass('active');
+        }),
+                $('.sub ul li a').click(function(){
+                    $('.sub ul li a').removeClass('active');
+                    $(this).addClass('active');
+                });
+    });
+</script>

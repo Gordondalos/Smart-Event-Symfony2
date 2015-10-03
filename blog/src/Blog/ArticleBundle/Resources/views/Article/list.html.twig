@@ -1,0 +1,36 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block content %}
+
+
+    {# total items count #}
+    <div class="count">
+        {{ pagination.getTotalItemCount }}
+    </div>
+    <table>
+        <tr>
+            {# sorting of properties based on query components #}
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 'a.articleId') }}</th>
+            <th{% if pagination.isSorted('a.articleTitle') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.articleTitle') }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Release', ['a.articleDate']) }}</th>
+        </tr>
+
+        {# table body #}
+        {% for article in pagination %}
+            <tr {% if loop.index is odd %}class="color"{% endif %}>
+                <td>{{ article.articleId }}</td>
+                <td>{{ article.articleTitle }}</td>
+                <td>{{ article.articleDate | date('Y-m-d') }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
+
+{% endblock %}
+
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %} Админка {% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="gordondalos">
+    <script src="{{ asset('bundles/blogarticle/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
+
+    <script src="{{ asset('bundles/blogarticle/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('bundles/blogarticle/js/jquery.js') }}"></script>
+    <script src="{{ asset('bundles/blogarticle/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/blogarticle/js/jquery.dotdotdot.min.js') }}" type="text/javascript"></script>
+
+    <!-- Le styles -->
+    <link href="{{ asset('bundles/blogarticle/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/blogarticle/css/bootstrap-responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/blogarticle/css/myAdmin.css') }}" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]-->
+    <script src="{{ asset('bundles/blogarticle/js/html5shiv.js') }}"></script>
+
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+</head>
+
+<body>
+
+
+{% if is_granted('ROLE_USER') %}
+{% block menu %}
+<div class="container">
+    {#<h3 class="muted">Мой блог</h3>#}
+    {% include('@BlogAdmin/adminMenu.html.twig') %}
+    {% endblock menu %}
+{% endif %}
+
+    {% block content %}
+    <!-- Example row of columns -->
+
+
+    {% endblock content %}
+
+    <div class="clear"></div>
+    <div class="bottom-block"></div>
+{% block footer %}
+    <div class="footer">
+        <p>&copy; Gordondalos © </p>
+    </div>
+{% endblock footer %}
+</div> <!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+
+<script src="{{ asset('bundles/blogarticle/js/my.js') }}"></script>
+
+</body>
+</html>
+
+
+
+
+

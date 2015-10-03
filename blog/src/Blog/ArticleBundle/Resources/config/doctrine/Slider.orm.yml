@@ -1,0 +1,35 @@
+Blog\ArticleBundle\Entity\Slider:
+    type: entity
+    table: slider
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        aHref:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: a_href
+        imgSrc:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: img_src
+        imgAltText:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: img_alt_text
+    lifecycleCallbacks: {  }

@@ -1,0 +1,13 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block content %}
+
+    {% for punct in menu %}
+
+    <li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-203 current_page_item">
+        <a href="{{ punct.menuHref }}">{{ punct.menuName }}</a>
+    </li>
+    {% endfor %}
+
+{% endblock %}
+

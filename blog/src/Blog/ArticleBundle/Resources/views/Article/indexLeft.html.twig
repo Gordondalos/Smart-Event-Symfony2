@@ -1,0 +1,25 @@
+
+<h2>Последние новости</h2>
+        {% for article in articles %}
+
+            <a href="{{ path('blog_article_post') }}/{{ article.articleId }}">
+                <div class="span4 text">
+                    {#{{ article.articleDate| date('d/m/Y') }}#}
+                    <time datetime="{{ article.articleDate| date('d/m/Y') }}"><i class="icon-calendar"></i>{{ article.articleDate| date('d/m/Y') }}</time>
+
+                    <h3> {{ article.articleTitle | raw }}</h3>
+                    <p>{{ article.shortText | raw }}</p>
+
+
+                </div>
+            </a>
+        {% endfor %}
+
+
+
+
+
+
+
+
+

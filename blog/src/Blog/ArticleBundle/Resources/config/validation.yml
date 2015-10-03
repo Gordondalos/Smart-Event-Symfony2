@@ -1,0 +1,9 @@
+Blog\ArticleBubdle\Entity\Article:
+    properties:
+        articleTitle:
+            - NotBlank: ~
+        articleText:
+            - NotBlank: ~
+        articleDate:
+            - NotBlank: ~
+            - Type: Date

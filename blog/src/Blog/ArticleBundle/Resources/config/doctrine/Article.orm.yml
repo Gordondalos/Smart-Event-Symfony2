@@ -1,0 +1,61 @@
+Blog\ArticleBundle\Entity\Article:
+    type: entity
+    table: article
+    id:
+        articleId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: article_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        articleText:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: article_text
+        articleDate:
+            type: date
+            nullable: false
+            comment: ''
+            column: article_date
+        articleIspublished:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: article_ispublished
+        articleTitle:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: article_title
+        articleCategoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: article_category_id
+        shortText:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: short_text
+        main:
+            type: boolean
+            nullable: true
+            comment: ''
+            default: '1'
+        general:
+            type: boolean
+            nullable: true
+            comment: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,48 @@
+Blog\ArticleBundle\Entity\Menu:
+    type: entity
+    table: menu
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        menuName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 'текст на ссылке отображаемый пользователю'
+            column: menu_name
+        menuHref:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 'ссылка куда ведет меню'
+            column: menu_href
+        menuParent:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 'этот пункт отображает кто родитель данного пункта меню, то есть это может быть подменю'
+            column: menu_parent
+        menuType:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 'Данный пункт показывает к какому меню принадлежит пункт, простое название'
+            column: menu_type
+        menuSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: menu_sort
+    lifecycleCallbacks: {  }

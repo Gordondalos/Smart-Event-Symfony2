@@ -1,0 +1,191 @@
+
+.text{
+
+   max-height: 250px;
+    word-wrap: break-word;
+    margin: 0px !important;
+    padding: 10px;
+    width: 31%;
+    /*text-align: justify !important;*/
+}
+.right{
+    float: right;
+}
+.exit{
+    float: right;
+    padding: 10px 15px;
+}
+
+
+.mycheckbox{
+    float: right;
+}
+
+.cherry-fixed-layout .main-holder {
+
+}
+body {
+    background-color: white;
+}
+
+h1 {
+    font: bold 30px/35px Lato;
+
+}
+
+h2 {
+    font: bold 16px/20px Lato;
+
+}
+
+h3 {
+    font: normal 14px/20px Lato;
+
+}
+
+h4 {
+    font: bold 14px/20px Lato;
+
+}
+
+h5 {
+    font: bold 12px/18px Lato;
+
+}
+
+h6 {
+    font: bold 12px/18px Lato;
+
+}
+
+body {
+    font-weight: normal;
+}
+
+.logo_h__txt, .logo_link {
+    font: normal 24px/24px Righteous;
+    color: #ffffff;
+}
+
+.sf-menu > li > a {
+    font: normal 23px/23px Righteous;
+    color: #ffffff;
+}
+
+.nav.footer-nav a {
+    font: normal 11px/20px Lato;
+    color: #8c8c8c;
+}
+
+a:hover{
+    color: black!important;
+}
+
+.nav-tabs {
+    background-color: #b1b1b1;
+}
+a{
+    color: grey;
+}
+
+
+
+hr{
+    border: none; /* Убираем границу для браузера Firefox */
+    color: grey; /* Цвет линии для остальных браузеров */
+    background-color: grey; /* Цвет линии для браузера Firefox и Opera */
+    height: 1px; /* Толщина линии */
+
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 80px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 80px;
+    background-color: #f5f5f5;
+}
+
+a:active{
+    background-color: grey;
+    color:brown;
+}
+
+.table th{
+    background-color: grey !important;
+    color: black;
+}
+.table th, .table td,
+{
+    border-top: 1px solid grey;
+    color:black;
+}
+
+.table a{
+    color:black;
+}
+.button_a{
+    padding: 8px 15px;
+    background-color: grey;
+    color: white;
+    border-radius: 4px;
+
+}
+.button_a a:hover{
+    text-decoration: none;
+}
+
+label{
+    display:inline;
+
+}
+
+input[type="checkbox"] {
+    margin: 0 10px !important;
+}
+
+input[type="text"]
+{
+    margin: 10px;
+}
+
+select{
+    margin-left: 10px;
+}
+#blog_articlebundle_article_submit{
+    margin-top: 20px;
+}
+
+.mycontainer{
+    width: 300px;
+    margin: auto;
+    margin-top: 150px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 20px;
+}
+.mycontainer label{
+    display: block;
+}
+.mycontainer input[type="checkbox"]{
+    margin: 5px 10px !important;
+    display: block;
+
+}
+.mycontainer input[type="text"]{
+    margin: auto;
+}
+
+#blog_articlebundle_category_categorySort{
+    width: 20px;
+}

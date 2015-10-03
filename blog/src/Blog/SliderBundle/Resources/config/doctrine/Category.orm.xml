@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Blog\SliderBundle\Entity\Category" table="category">
+    <id name="categoryId" type="integer" column="category_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="categoryName" type="text" column="category_name" nullable="false"/>
+    <field name="categoryDescription" type="text" column="category_description" nullable="false"/>
+    <field name="categoryParent" type="integer" column="category_parent" nullable="true"/>
+  </entity>
+</doctrine-mapping>

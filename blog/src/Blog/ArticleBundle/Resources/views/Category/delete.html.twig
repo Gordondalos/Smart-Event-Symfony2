@@ -1,0 +1,13 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block title %}Удалить Категорию{% endblock title %}
+{% block content %}
+    {% block recla %} {% endblock recla %}
+
+    <p>Вы действительно хотите удалить Категорию: <b> {{ category.categoryName }}? </b></p>
+    {{ form_start(deleteform, {attr: {novalidate: 'novalidate'}}) }}
+    {{ form_widget(deleteform) }}
+    {{ form_end(deleteform) }}
+
+
+{% endblock content %}

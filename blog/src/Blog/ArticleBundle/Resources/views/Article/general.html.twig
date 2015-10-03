@@ -1,0 +1,16 @@
+
+
+
+
+    {#{{ post.articleDate| date('d/m/Y') }}#}
+    {#<h2> {{ post.articleTitle | raw }}</h2>#}
+
+    {% for posts in post %}
+    <p>{{ posts.articleText | raw }}</p>
+
+    {% if is_granted('ROLE_USER') %}
+        <a class="btn" href="{{ path('blog_article_edit') }}/{{ posts.articleId }}">Правка</a>
+        <a class="btn" href="{{ path('blog_article_delete') }}/{{ posts.articleId }}">Удалить статью</a>
+    {% endif %}
+
+    {%  endfor %}

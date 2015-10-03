@@ -1,0 +1,109 @@
+{% extends '::base2.html.twig' %}
+
+{% block title %}{{ post.categoryName }}{% endblock title %}
+{% block recla %}{% endblock recla %}
+{% block category %}{% endblock category %}
+
+{% block content %}
+    {#<div class="container-fluid">#}
+    {#<div class="row">#}
+
+    {{ render(controller('BlogArticleBundle:Category:doterCategory',{'categoryId':post.CategoryId})) }}
+
+    <div class="count">
+        <h2> {{ post.categoryName | raw }}
+            (Всего статей {{ pagination.getTotalItemCount }})
+        </h2>
+    </div>
+
+    {#{{ knp_pagination_sortable(pagination, 'Дата пуликации', ['a.articleDate']) }}#}
+    <table>
+        {#<tr>#}
+        {# sorting of properties based on query components #}
+        {#<th>{{ knp_pagination_sortable(pagination, 'Id', 'a.articleId') }}</th>#}
+        {#<th{% if pagination.isSorted('a.articleTitle') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.articleTitle') }}</th>#}
+        {#<th>{{ knp_pagination_sortable(pagination, 'Release', ['a.articleDate']) }}</th>#}
+        {#</tr>#}
+
+        {# table body #}
+        {% for article in pagination %}
+            <tr {% if loop.index is odd %}class="color"{% endif %}>
+                {#<td>{{ article.articleId }}</td>#}
+                <td>
+                    <a href="{{ path('blog_article_post') }}/{{ article.articleId }}">
+
+                        <time datetime="{{ article.articleDate| date('d/m/Y') }}"><i class="icon-calendar"></i>{{ article.articleDate| date('d/m/Y') }}</time>
+
+                        <h4>
+
+
+
+                             {{ article.articleTitle | raw }}
+
+                        </h4>
+
+                        {#<div class="text">#}
+                            {{ article.shortText|raw }}
+                        {#</div>#}
+                    </a>
+                    <br>
+                    <a style="margin: 20px" href="{{ path('blog_article_post') }}/{{ article.articleId }}" class="btn btn-primary">Читать...</a>
+                    <hr>
+                </td>
+                {#<td>{{ article.articleDate | date('Y-m-d') }}</td>#}
+            </tr>
+        {% endfor %}
+    </table>
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
+
+
+
+
+
+
+
+    {#<div class="count">#}
+
+    {#<h2> {{ post.categoryName | raw }}#}
+
+
+    {#(статей {{ pagination.getTotalItemCount }})#}
+
+    {#</h2>#}
+    {#</div>#}
+
+
+
+    {#{% for article in articles %}#}
+
+    {#<a href="{{ path('blog_article_post') }}/{{ article.articleId }}">#}
+    {#<h4>#}
+    {#{{ article.articleDate| date('d/m/Y') }} {{ article.articleTitle | raw }}#}
+
+    {#</h4>#}
+
+    {#<div class="text">#}
+    {#{{ article.shortText|raw }}#}
+    {#</div>#}
+    {#</a>#}
+    {#<br>#}
+    {#<hr>#}
+
+    {#{% endfor %}#}
+
+
+    {#&#123;&#35;<a class="btn" href="{{ path('blog_article_edit') }}/{{ post.articleId }}">Правка</a>&#35;&#125;#}
+    {#&#123;&#35;<a class="btn" href="{{ path('blog_article_delete') }}/{{ post.articleId }}">Удалить статью</a>&#35;&#125;#}
+
+    {#&#123;&#35;</div>&#35;&#125;#}
+    {#&#123;&#35;</div>&#35;&#125;#}
+
+
+    {#<div class="navigation">#}
+    {#{{ knp_pagination_render(pagination) }}#}
+    {#</div>#}
+{% endblock content %}

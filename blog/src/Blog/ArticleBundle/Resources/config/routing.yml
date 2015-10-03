@@ -1,0 +1,80 @@
+blog_article_homepage:
+    path:     /
+    defaults: { _controller: BlogArticleBundle:Article:index }
+
+blog_category_homepage:
+    path:     /category
+    defaults: { _controller: BlogArticleBundle:Category:index }
+
+blog_category_allCategory:
+    path:     /category/allCategory
+    defaults: { _controller: BlogArticleBundle:Category:allCategory }
+
+
+blog_article_post:
+    path:     /post/{id}
+    defaults: { _controller: BlogArticleBundle:Article:post , id = 1 }
+    requirements:
+        id: \d+
+
+blog_category_post:
+    path:     /category/post/{id}
+    defaults: { _controller: BlogArticleBundle:Category:post , id = 1 }
+    requirements:
+        id: \d+
+
+blog_article_create:
+    path:     /create
+    defaults: { _controller: BlogArticleBundle:Article:create }
+
+blog_category_create:
+    path:     /category/create
+    defaults: { _controller: BlogArticleBundle:Category:create }
+
+
+blog_article_sucsses:
+    path:     /sucess
+    defaults: { _controller: BlogArticleBundle:Article:sucess }
+
+
+blog_article_edit:
+    path:     /edit/{id}
+    defaults: { _controller: BlogArticleBundle:Article:edit , id = 1 }
+    requirements:
+        id: \d+
+        _method: GET|POST
+
+blog_category_edit:
+    path:     /category/edit/{id}
+    defaults: { _controller: BlogArticleBundle:Category:edit , id = 1 }
+    requirements:
+        id: \d+
+        _method: GET|POST
+
+blog_category_delete:
+    path:     /category/delete/{id}
+    defaults: { _controller: BlogArticleBundle:Category:delete , id = 1 }
+    requirements:
+        id: \d+
+        _method: GET|POST
+
+
+blog_article_all:
+    path:     /all
+    defaults: { _controller: BlogArticleBundle:Article:all}
+
+blog_article_isPublished:
+    path:     /allIsPublished
+    defaults: { _controller: BlogArticleBundle:Article:allIsPublished}
+
+
+blog_article_delete:
+    path:     /delete/{id}
+    defaults: { _controller: BlogArticleBundle:Article:delete , id = 1 }
+    requirements:
+        id: \d+
+        _method: GET|POST
+
+blog_article_ispaginator:
+    path:     /list
+    defaults: { _controller: BlogArticleBundle:Article:list}

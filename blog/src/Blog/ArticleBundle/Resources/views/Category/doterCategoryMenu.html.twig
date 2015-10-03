@@ -1,0 +1,8 @@
+
+
+{% for category in categorys %}
+<li>
+    <a href="/blog/web/category/post/{{ category.categoryId }}">{{ category.categoryName |raw}}</a>
+</li>
+{% endfor %}
+

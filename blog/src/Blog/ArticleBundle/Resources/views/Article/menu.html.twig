@@ -1,0 +1,177 @@
+<header class="motopress-wrapper header">
+    <div class="container">
+        <div class="row">
+            <div class="span12" data-motopress-wrapper-file="wrapper/wrapper-header.php"
+                 data-motopress-wrapper-type="header" data-motopress-id="55f4b76e3051f">
+                <div class="row">
+                    <div class="span7" data-motopress-type="dynamic-sidebar"
+                         data-motopress-sidebar-id="header-sidebar">
+                        <div id="meta-2" class="widget widget_header">
+
+                            <ul>
+                                <li><a href="{{ path('blog_admin_homepage') }}">Войти</a></li>
+                                {% if is_granted('ROLE_USER') %}
+                                    <li><a href="{{ path('blog_admin_home') }}">Админка</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span5">
+                        <div class="hidden-phone" data-motopress-type="static"
+                             data-motopress-static-file="static/static-search.php">
+
+                            {#Форма поиска по бд#}
+
+                            {#<div class="search-form search-form__h hidden-phone">#}
+                            {#<form id="search-header" class="navbar-form pull-right" method="get"#}
+                            {#action="http://livedemo00.template-help.com/wordpress_53261/"#}
+                            {#accept-charset="utf-8">#}
+                            {#<input type="text" name="s" placeholder="" class="search-form_it">#}
+                            {#<button type="submit" class="search-form_is">#}
+                            {#<i class="icon-search"></i>#}
+                            {#</button>#}
+                            {#</form>#}
+                            {#</div>#}
+
+
+                            <div class="search-form search-form__h hidden-phone">
+                                <script type="text/javascript">(function() {
+                                        if (window.pluso)if (typeof window.pluso.start == "function") return;
+                                        if (window.ifpluso==undefined) { window.ifpluso = 1;
+                                            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                                            s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                                            s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                                            var h=d[g]('body')[0];
+                                            h.appendChild(s);
+                                        }})();</script>
+                                <div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,counter,theme=05" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print"></div>
+
+
+
+
+                                <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'http://yandex.ru/sitesearch','arrow':false,'bg':'#000000','fontsize':12,'fg':'#000000','language':'ru','logo':'rb','publicname':'Поиск','suggest':true,'target':'_blank','tld':'ru','type':2,'usebigdictionary':true,'searchid':2235721,'webopt':false,'websearch':false,'input_fg':'#000000','input_bg':'#ffffff','input_fontStyle':'normal','input_fontWeight':'normal','input_placeholder':'','input_placeholderColor':'#000000','input_borderColor':'#000000'}"><form action="http://yandex.ru/sitesearch" method="get" target="_blank"><input type="hidden" name="searchid" value="2235721"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+                            </div>
+
+
+                            {#Форма поиска по бд#}
+                        </div>
+
+                        {#Социальные линки#}
+                        <div class="social-nets-wrapper" data-motopress-type="static"
+                             data-motopress-static-file="static/static-social-networks.php">
+
+
+                            {#<ul class="social">#}
+                                {#<li><a href="#" title="facebook" class="facebook-link"><i#}
+                                                {#class="icon-facebook"></i></a>#}
+                                {#</li>#}
+                                {#<li><a href="#" title="twitter" class="twitter-link"><i#}
+                                                {#class="icon-twitter"></i></a></li>#}
+                            {#</ul>#}
+                        </div>
+                        {#Социальные линки#}
+
+                    </div>
+                </div>
+                {#Навигация#}
+                <div class="nav-wrapper">
+                    <div class="row">
+                        <div class="span3" data-motopress-type="static"
+                             data-motopress-static-file="static/static-logo.php">
+
+                            {#Логотип#}
+                            <div class="logo pull-left">
+                                <a href="{{ path('blog_article_homepage') }}"
+                                   class="logo_h logo_h__img"><img
+                                            src="{{ asset('bundles/blogarticle/img/logo.png') }}"
+                                            alt="Smart Event" title=""></a>
+                            </div>
+                            {#Логотип#}
+                        </div>
+
+                        <div class="span9" data-motopress-type="static"
+                             data-motopress-static-file="static/static-nav.php">
+
+                            <nav class="nav nav__primary clearfix">
+                                <ul id="topnav" class="sf-menu">
+
+                                    {{ render(controller('BlogMenuBundle:Menu:OneMenu')) }}
+                                    {#{{ render(controller('BlogMenuBundle:Menu:index')) }}#}
+
+                                    {#<li id="menu-item-2075"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-203 current_page_item">#}
+                                    {#<a href="{{ path('blog_article_homepage') }}">Главная</a>#}
+                                    {#</li>#}
+                                    {#<li id="menu-item-2077"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">#}
+                                    {#<a href="{{ path('blog_category_homepage') }}">Разделы</a>#}
+                                    {#<ul class="sub-menu">#}
+                                    {#<li id="menu-item-2078"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page">#}
+                                    {#<a#}
+                                    {#href="http://livedemo00.template-help.com/wordpress_53261/movies/testi/">Testimonials</a>#}
+                                    {#</li>#}
+                                    {#<li id="menu-item-2079"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page">#}
+                                    {#<a#}
+                                    {#href="http://livedemo00.template-help.com/wordpress_53261/movies/archives/">Archives</a>#}
+                                    {#</li>#}
+                                    {#<li id="menu-item-2073"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page">#}
+                                    {#<a#}
+                                    {#href="http://livedemo00.template-help.com/wordpress_53261/movies/faqs/">FAQs</a>#}
+                                    {#</li>#}
+                                    {#</ul>#}
+                                    {#</li>#}
+                                    {#<li id="menu-item-2076"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">#}
+                                    {#<a href="#">Галереи</a>#}
+                                    {#<ul class="sub-menu">#}
+                                    {#<li id="menu-item-2082"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page">#}
+                                    {#<a#}
+                                    {#href="http://livedemo00.template-help.com/wordpress_53261/portfolio/portfolio-2/">Gallery#}
+                                    {#2</a></li>#}
+                                    {#<li id="menu-item-2081"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">#}
+                                    {#<a href="http://livedemo00.template-help.com/wordpress_53261/portfolio/portfolio-3/">Gallery#}
+                                    {#3</a>#}
+                                    {#<ul class="sub-menu">#}
+                                    {#<li id="menu-item-2090"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page">#}
+                                    {#<a href="http://livedemo00.template-help.com/wordpress_53261/portfolio/portfolio-3/category-1/">Category#}
+                                    {#1</a></li>#}
+                                    {#<li id="menu-item-2089"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page">#}
+                                    {#<a href="http://livedemo00.template-help.com/wordpress_53261/portfolio/portfolio-3/category-2/">Category#}
+                                    {#2</a></li>#}
+                                    {#<li id="menu-item-2088"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page">#}
+                                    {#<a href="http://livedemo00.template-help.com/wordpress_53261/portfolio/portfolio-3/category-3/">Category#}
+                                    {#3</a></li>#}
+                                    {#</ul>#}
+                                    {#</li>#}
+                                    {#<li id="menu-item-2080"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page">#}
+                                    {#<a#}
+                                    {#href="http://livedemo00.template-help.com/wordpress_53261/portfolio/portfolio-4/">Gallery#}
+                                    {#4</a></li>#}
+                                    {#</ul>#}
+                                    {#</li>#}
+                                    {#<li id="menu-item-2074"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page"><a#}
+                                    {#href="category/post/4">Блог</a>#}
+                                    {#</li>#}
+                                    {#<li id="menu-item-2072"#}
+                                    {#class="menu-item menu-item-type-post_type menu-item-object-page"><a#}
+                                    {#href="#">Контакты</a>#}
+                                    {#</li>#}
+                                    {#</ul>#}
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

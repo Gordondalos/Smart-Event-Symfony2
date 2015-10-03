@@ -1,0 +1,7 @@
+blog_menu_menu:
+    resource: "@BlogMenuBundle/Resources/config/routing/menu.yml"
+    prefix:   /menu
+
+#blog_menu_homepage:
+#    path:     /
+#    defaults: { _controller: BlogMenuBundle:Default:index }

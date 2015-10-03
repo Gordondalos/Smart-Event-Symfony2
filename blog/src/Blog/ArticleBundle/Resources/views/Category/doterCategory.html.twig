@@ -1,0 +1,8 @@
+
+
+{% for category in categorys %}
+
+  <a style="margin: 10px 5px" href="/blog/web/category/post/{{ category.categoryId }}">{{ category.categoryDescription |raw}}</a>
+
+{% endfor %}
+

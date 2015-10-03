@@ -1,0 +1,30 @@
+slider:
+    path:     /
+    defaults: { _controller: "BlogSliderBundle:Slider:index" }
+
+slider_show:
+    path:     /{id}/show
+    defaults: { _controller: "BlogSliderBundle:Slider:show" }
+
+slider_new:
+    path:     /new
+    defaults: { _controller: "BlogSliderBundle:Slider:new" }
+
+slider_create:
+    path:     /create
+    defaults: { _controller: "BlogSliderBundle:Slider:create" }
+    requirements: { _method: post }
+
+slider_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BlogSliderBundle:Slider:edit" }
+
+slider_update:
+    path:     /{id}/update
+    defaults: { _controller: "BlogSliderBundle:Slider:update" }
+    requirements: { _method: post|put }
+
+slider_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BlogSliderBundle:Slider:delete" }
+    requirements: { _method: post|delete }

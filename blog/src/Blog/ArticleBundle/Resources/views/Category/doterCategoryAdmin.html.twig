@@ -1,0 +1,13 @@
+
+<ul>
+{% for category in categorys %}
+
+    <li>
+    <a style="margin: 10px 5px" href="/blog/web/category/post/{{ category.categoryId }}">{{ category.categoryName |raw}} - {{ category.categorySort |raw }} - </a>
+        <a href="{{ path('blog_category_edit', {'id': category.categoryId}) }}">--Правка</a>
+        <a href="{{ path('blog_category_delete', {'id': category.categoryId}) }}">--Удалить</a>
+
+
+    </li>
+{% endfor %}
+</ul>

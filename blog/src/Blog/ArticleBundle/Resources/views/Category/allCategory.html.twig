@@ -1,0 +1,15 @@
+
+
+ {% for categorys in category %}
+
+
+
+    <li class="sub">
+        <a href="/blog/web/category/post/{{ categorys.categoryId }}">{{ categorys.categoryName  }}</a>
+        <ul>
+            {{ render(controller('BlogArticleBundle:Category:doterCategoryMenu',{'categoryId':categorys.CategoryId})) }}
+        </ul>
+    </li>
+    {% endfor %}
+
+

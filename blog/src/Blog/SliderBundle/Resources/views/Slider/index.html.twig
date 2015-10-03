@@ -1,0 +1,54 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block content %}
+
+    <h1>Список слайдов</h1>
+
+    <ul class="right">
+        <li style="list-style-type: none">
+            <a class="button_a" href="{{ path('slider_new') }}">
+                Добавить слайд
+            </a>
+        </li>
+    </ul>
+
+    <table class="table table-striped table-bordered table-condensed">
+        <thead>
+        <tr>
+            <th>Ссылка куда будет идти при нажатии</th>
+            <th>Ссылка на загруженную картинку</th>
+            <th>Тект на картинке</th>
+            <th>Id</th>
+            <th>Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('slider_show', { 'id': entity.id }) }}">{{ entity.aHref }}</a></td>
+                <td>{{ entity.imgSrc }}</td>
+                <td>{{ entity.imgAltText }}</td>
+                <td>{{ entity.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('slider_show', { 'id': entity.id }) }}">Показать</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('slider_edit', { 'id': entity.id }) }}">Правка</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul class="right">
+        <li style="list-style-type: none">
+            <a class="button_a" href="{{ path('slider_new') }}">
+                Добавить слайд
+            </a>
+        </li>
+    </ul>
+{% endblock %}

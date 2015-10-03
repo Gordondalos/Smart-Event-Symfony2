@@ -1,0 +1,7 @@
+blog_slider_slider:
+    resource: "@BlogSliderBundle/Resources/config/routing/slider.yml"
+    prefix:   /
+
+#blog_slider_homepage:
+#    path:     /1
+#    defaults: { _controller: BlogSliderBundle:Default:index }

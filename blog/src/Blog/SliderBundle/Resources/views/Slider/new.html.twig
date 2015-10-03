@@ -1,0 +1,15 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block content %}
+    <h1>Создание нового слайдера</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('slider') }}">
+            Вернуться к списку
+        </a>
+    </li>
+</ul>
+{% endblock %}

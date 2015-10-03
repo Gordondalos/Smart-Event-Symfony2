@@ -1,0 +1,14 @@
+{% extends '::baseAdmin.html.twig' %}
+
+
+{% block content %}
+    {% block recla %}{% endblock recla %}
+
+
+    <h1>Статья успешно добавлена</h1>
+
+    <a href="{{ path('blog_article_create') }}">Создать еще</a>
+
+
+
+{% endblock content %}

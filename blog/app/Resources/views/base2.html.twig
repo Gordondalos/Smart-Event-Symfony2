@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-US"> <!--<![endif]-->
+<head>
+    <title>{% block title %} Smart Event {% endblock title %}</title>
+    <meta name="description" content=" | "/>
+    <meta charset="UTF-8"/>
+    {#Фавикон#}
+    <link rel="icon" href="{{ asset('bundles/blogarticle/img/favicon.ico') }}" type="image/x-icon"/>
+
+    {% include('@BlogArticle/Article/css.html.twig') %}
+    {% include('@BlogArticle/Article/scrypt.html.twig') %}
+</head>
+
+<body class="home page page-id-203 page-template page-template-page-home page-template-page-home-php cherry-fixed-layout">
+<div id="motopress-main" class="main-holder">
+
+    {% block menu %}
+        {% include('@BlogArticle/Article/menu.html.twig') %}
+    {% endblock menu %}
+
+
+    <div class="motopress-wrapper content-holder clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="span12" data-motopress-wrapper-file="page-home.php" data-motopress-wrapper-type="content">
+                    <div class="row">
+                        <div class="span12" data-motopress-type="static"
+                             data-motopress-static-file="static/static-slider.php">
+                            <div class="slider_off"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span12" data-motopress-type="loop" data-motopress-loop-file="loop/loop-page.php">
+                            <div id="post-203" class="post-203 page type-page status-publish hentry">
+                                <div class="row ">
+
+                                    <div class="span8 ">
+
+                                        {% block recla %}
+                                            {% include('@BlogArticle/Article/slider.html.twig') %}
+                                        {% endblock %}
+
+                                        {% block category %}
+                                            {% include('@BlogArticle/Article/qcategory.html.twig') %}
+                                        {% endblock category %}
+                                        {% block content %}
+                                            <!-- Example row of columns -->
+                                        {% endblock content %}
+
+
+                                        {#<a href="allIsPublished" title="sEE ALL articles"#}
+                                        {#class="btn btn-primary btn-normal btn-inline " target="_self">Все статьи</a>#}
+                                    </div>
+                                    {% block rightMenu %}
+                                        {% include('@BlogArticle/Article/rightMenu.html.twig') %}
+                                    {% endblock rightMenu %}
+                                </div>
+
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include('@BlogArticle/Article/footer.html.twig') %}
+</div>
+<div id="back-top-wrapper" class="visible-desktop">
+    <p id="back-top"><a href="#top"><span></span></a></p>
+</div>
+{% include('@BlogArticle/Article/footerScript.html.twig') %}
+
+</body>
+</html>

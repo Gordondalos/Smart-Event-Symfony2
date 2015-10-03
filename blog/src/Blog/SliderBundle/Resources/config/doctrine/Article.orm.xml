@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Blog\SliderBundle\Entity\Article" table="article">
+    <id name="articleId" type="integer" column="article_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="articleText" type="text" column="article_text" nullable="false"/>
+    <field name="articleDate" type="date" column="article_date" nullable="false"/>
+    <field name="articleIspublished" type="boolean" column="article_ispublished" nullable="false"/>
+    <field name="articleTitle" type="string" column="article_title" length="255" nullable="false"/>
+    <field name="articleCategoryId" type="integer" column="article_category_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>

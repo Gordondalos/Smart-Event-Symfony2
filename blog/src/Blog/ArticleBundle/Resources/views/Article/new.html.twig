@@ -1,0 +1,22 @@
+{% extends '::baseAdmin.html.twig' %}
+
+
+{% block content %}
+    {% block recla %}{% endblock recla %}
+
+
+
+
+{{ form_start(createform, {attr: { class: 'form-horizontal', novalidate: 'novalidate'}}) }}
+
+
+   {#<textarea class="tinymce"></textarea>#}
+
+{{ form_widget(createform) }}
+
+    <script text="javascrypt">
+        CKEDITOR.replace("blog_articlebundle_article_shortText");
+        CKEDITOR.replace("blog_articlebundle_article_articleText");
+    </script>
+
+{% endblock content %}

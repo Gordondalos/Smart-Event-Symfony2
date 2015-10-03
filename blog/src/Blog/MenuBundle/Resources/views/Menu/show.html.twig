@@ -1,0 +1,40 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block content%}
+    <h1>Menu</h1>
+
+    <table class=" table record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <th>Menuname</th>
+                <th>Menuhref</th>
+                <th>Menuparent</th>
+                <th>Menutype</th>
+
+            </tr>
+            <tr>
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.menuName }}</td>
+                <td>{{ entity.menuHref }}</td>
+                <td>{{ entity.menuParent }}</td>
+                <td>{{ entity.menuType }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('menu') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('menu_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

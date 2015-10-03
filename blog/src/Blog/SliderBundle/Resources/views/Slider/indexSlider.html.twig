@@ -1,0 +1,72 @@
+
+<div id="flexslider_qcarjxpufg" class="flexslider no-bg extra-style">
+    <ul class="slides">
+
+{% for slide in slides %}
+    {#{{ slide.imgSrc }}#}
+    {#{{ slide.aHref }}#}
+
+
+            <li class="list-item-{{slide.id }}">
+                <figure class="thumbnail featured-thumbnail">
+                    <a href="{{ slide.aHref}}" title="{{ slide.imgAltText}}">
+                        <img src="{{ slide.imgSrc }}"
+                             alt="{{ slide.imgAltText}}"/>
+                    </a>
+                </figure>
+                <div class="desc">
+                    <div class="desc-inner"><h5><a
+                                    href="{{ slide.aHref}}"
+                                    title="{{ slide.imgAltText}}">
+                                {{ slide.imgAltText}}</a></h5>
+
+                        <div class="post_options"></div>
+                        {#<p class="excerpt">Мы для вас споём и#}
+                            {#спляшем... </p>#}
+                    </div>
+                </div>
+            </li>
+            {#<li class="list-item-1">#}
+                {#<figure class="thumbnail featured-thumbnail"><a#}
+                            {#href="#"#}
+                            {#title="Мы раскажем вам стишки"><img#}
+                                {#src="{{ asset('bundles/blogarticle/img/slides2-970x414.jpg') }}"#}
+                                {#alt="Мы раскажем вам стишки"/></a>#}
+                {#</figure>#}
+                {#<div class="desc">#}
+                    {#<div class="desc-inner"><h5><a#}
+                                    {#href="#"#}
+                                    {#title="Мы раскажем вам стишки">#}
+                                {#Мы раскажем вам стишки#}
+                            {#</a></h5>#}
+
+                        {#<div class="post_options"></div>#}
+                        {#<p class="excerpt">Мы раскажем вам стишки... </p>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</li>#}
+            {#<li class="list-item-2">#}
+                {#<figure class="thumbnail featured-thumbnail">#}
+                    {#<a#}
+                            {#href="#"#}
+                            {#title="Ну закажи у нас день рожденье!"><img#}
+                                {#src="{{ asset('bundles/blogarticle/img/slides3-970x414.jpg') }}"#}
+                                {#alt="Ну закажи у нас день рожденье!"/></a>#}
+                {#</figure>#}
+                {#<div class="desc">#}
+                    {#<div class="desc-inner"><h5><a#}
+                                    {#href="#"#}
+                                    {#title="Ну закажи у нас день рожденье">Ну#}
+                                {#закажи у нас день рожденье</a></h5>#}
+
+                        {#<div class="post_options"></div>#}
+                        {#<p class="excerpt">Ну закажи у нас день#}
+                            {#рожденье... </p></div>#}
+                {#</div>#}
+            {#</li>#}
+
+
+
+{% endfor %}
+    </ul>
+</div>

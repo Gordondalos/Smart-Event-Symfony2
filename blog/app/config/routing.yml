@@ -1,0 +1,19 @@
+blog_menu:
+    resource: "@BlogMenuBundle/Resources/config/routing.yml"
+    prefix:   /menu
+
+blog_slider:
+    resource: "@BlogSliderBundle/Resources/config/routing.yml"
+    prefix:   /slider
+
+blog_admin:
+    resource: "@BlogAdminBundle/Resources/config/routing.yml"
+    prefix:   /auth
+
+blog_article:
+    resource: "@BlogArticleBundle/Resources/config/routing.yml"
+    prefix:   /
+
+#fos_user:
+#    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+

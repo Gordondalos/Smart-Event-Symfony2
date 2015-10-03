@@ -1,0 +1,42 @@
+<div class="masthead">
+
+    <ul class="nav nav-tabs">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Разделы <b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ path('blog_category_create') }}">Добавить Раздел</a></li>
+                <li><a href="{{ path('blog_category_homepage') }}">Все Разделы</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Статьи <b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ path('blog_article_create') }}">Добавить Статью</a></li>
+                <li><a href="{{ path('blog_article_all') }}">Просмотр / Правка статей</a></li>
+                {#<li><a href="{{ path('blog_article_isPublished') }}">Все Статьи</a></li>#}
+            </ul>
+        </li>
+
+        <li><a href="/blog/web/app_dev.php/menu/menu/">Редактор меню</a></li>
+        <li><a href="/blog/web/bundles/blogarticle/kcfinder/browse.php?opener=ckeditor&type=images&CKEditor=blog_articlebundle_article_articleText&CKEditorFuncNum=1&langCode=ru">Менеджер Файлов</a></li>
+
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Пользователи <b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ path('fos_user_profile_show') }}">Просмотр профайла</a></li>
+                <li><a href="{{ path('fos_user_profile_edit') }}">Правка профайла</a></li>
+                <li><a href="{{ path('fos_user_registration_register') }}">Зарегестрировать нового пользователя</a></li>
+                <li><a href="{{ path('fos_user_change_password') }}">Сменить пароль</a></li>
+
+
+            </ul>
+        </li>
+        <li><a href="/blog/web/slider/">Настройка слайдера</a></li>
+        <li><a href="/blog/web/">Просмотр сайта</a></li>
+        <li><a class="exit" href="/blog/web/auth/logout">Выход</a></li>
+
+    </ul>
+
+</div>

@@ -1,0 +1,22 @@
+
+
+
+
+<div class="sidebar span4 " id="sidebar" data-motopress-type="static-sidebar" data-motopress-sidebar-file="sidebar.php">
+    <div id="categories-2" class="widget widget_categories">
+        <h3 class="widget-title">Categories</h3>
+        <div class="mini-menu">
+            <ul>
+                {{ render(controller('BlogArticleBundle:Category:all_allCategory')) }}
+            </ul>
+        </div>
+
+    </div>
+    {{ render(controller('BlogArticleBundle:Article:indexLeft')) }}
+
+
+
+</div>
+
+
+

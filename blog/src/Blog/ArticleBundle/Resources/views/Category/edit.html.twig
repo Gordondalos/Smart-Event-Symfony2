@@ -1,0 +1,23 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block title %}Изменить раздел{% endblock title %}
+{% block content %}
+    {% block recla %}{% endblock recla %}
+
+
+
+
+    {{ form_start(editform, {attr: { class: 'form-horizontal',novalidate: 'novalidate'}}) }}
+
+
+
+    {#<textarea name="text"></textarea>#}
+
+    {{ form_widget(editform) }}
+
+    <script text="javascrypt">
+//        CKEDITOR.replace("blog_articlebundle_category_categoryName");
+        CKEDITOR.replace("blog_articlebundle_category_categoryDescription");
+    </script>
+
+{% endblock content %}

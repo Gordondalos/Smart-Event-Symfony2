@@ -1,0 +1,48 @@
+{% extends '::baseAdmin.html.twig' %}
+
+
+
+{% block content %}
+<h1>Статьи</h1>
+      <div class="count">
+       Всего статей  {{ pagination.getTotalItemCount }}
+    </div>
+
+
+    <table class="table">
+        <tr>
+            {# sorting of properties based on query components #}
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 'a.articleId') }}</th>
+            <th{% if pagination.isSorted('a.articleTitle') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Название', 'a.articleTitle') }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Дата публикации', ['a.articleDate']) }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Статус', 'a.articleIspublished') }} </th>
+            <th>Действие</th>
+        </tr>
+
+        {# table body #}
+        {% for article in pagination %}
+            <tr {% if loop.index is odd %}class="color"{% endif %}>
+                <td>{{ article.articleId }}</td>
+                <td> <a href="{{ path('blog_article_post') }}/{{ article.articleId }}"> {{ article.articleTitle }}</a></td>
+                <td>{{ article.articleDate | date('Y-m-d') }}</td>
+                <td>
+                    {% if article.articleIspublished %}
+                        <p> Статья опубликована</p>
+                    {% else %}
+                        <p> Статья не опубликована</p>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ path('blog_article_edit') }}/{{ article.articleId }}">Правка</a>
+                    <a href="{{ path('blog_article_delete') }}/{{ article.articleId }}">Удалить</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+{% endblock content %}

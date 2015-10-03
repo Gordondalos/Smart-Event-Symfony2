@@ -1,0 +1,51 @@
+{% extends '::baseAdmin.html.twig' %}
+
+{% block content %}
+    <h1>Редактор меню</h1>
+
+    <table class=" table records_list table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Сортировочный индекс</th>
+            <th>Название Пункта меню</th>
+            <th>Ссылка</th>
+            <th>Родительский пункт меню (id)</th>
+            <th>Название меню</th>
+
+            <th>Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('menu_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td><a href="{{ path('menu_show', { 'id': entity.id }) }}">{{ entity.menuSort }}</a></td>
+                <td><a href="{{ path('menu_show', { 'id': entity.id }) }}">{{ entity.menuName }}</a></td>
+                <td><a href="{{ path('menu_show', { 'id': entity.id }) }}">{{ entity.menuHref }}</a></td>
+                <td><a href="{{ path('menu_show', { 'id': entity.id }) }}">{{ entity.menuParent }}</a></td>
+                <td><a href="{{ path('menu_show', { 'id': entity.id }) }}">{{ entity.menuType }}</a></td>
+
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('menu_show', { 'id': entity.id }) }}">Показать</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('menu_edit', { 'id': entity.id }) }}">Правка</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('menu_new') }}">
+                Добавить пункт меню
+            </a>
+        </li>
+    </ul>
+{% endblock %}

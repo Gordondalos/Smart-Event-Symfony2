@@ -1,0 +1,21 @@
+{% extends '::baseAdmin.html.twig' %}
+
+
+
+{% block content %}
+    {% block recla %} {% endblock recla %}
+    {% for article in articles %}
+
+    <h4> {{ article.articleDate| date('d/m/Y') }} <a href="{{path('blog_article_post') }}/{{ article.articleId }}"> {{ article.articleTitle | raw }}</a></h4>
+        {#<p class="text">#}
+
+            {#&#123;&#35;{{ article.articleText | raw }}&#35;&#125;#}
+
+
+        {#</p>#}
+        <a href="{{ path('blog_article_edit') }}/{{ article.articleId }}">Правка</a>
+        {#<a href="{{ path('blog_article_post') }}/{{ article.articleId }}">Подробнее</a>#}
+<hr>
+    {% endfor %}
+
+{% endblock content %}
